@@ -1,0 +1,75 @@
+{% extends 'Adminbase.html.twig' %}
+
+{% block body %}
+
+			<div class="card-body">
+      
+				<h4 class="card-title">
+					Listes des Activites</h4>
+				<div class="table-responsive">
+		   	<table class="table table-striped">
+              
+						<thead>
+							<tr>
+								<th>Non</th>
+								<th>Type </th>
+								<th>Prix</th>
+                              <th> Modification</th>
+                             <th>Suppression</th>
+							</tr>
+						</thead>
+						<tbody>
+						
+    
+      {% for act in a %}
+	  <tbody>
+     <tr>
+       <td>{{ act.nomActivite }}</td>
+       <td>{{ act.typeActivite}}</td>
+       <td>{{ act.prixActivite}}</td>
+       {#<td><td><video type:"mp4" src="{{ asset('vidéos/') ~ activite.video }}"alt="exercice" width="400" height="450" >  </td></td>#}
+       
+       <video  width="600" height="200" controls autoplay src="{{ asset('vidéos/') ~ act.video }}" type= video/mp4>
+       </video> 
+ 
+
+							{#}	<div class="d-flex align-items-center">
+											<a class="btn btn-success btn-sm btn-icon-text mr-3" href="{{ path('modifEvent',{'id': event.id}) }}" "">
+												Modifier
+												<i class="typcn typcn-edit btn-icon-append"></i>
+                        </a>
+											</button>
+											<a class="btn btn-danger btn-sm btn-icon-text" href="{{ path('supp_event',{'id': event.id}) }}" "">
+												Supprimer
+												<i class="typcn typcn-delete-outline btn-icon-append"></i>
+                        </a>
+											</button>
+										</div>#}
+
+         <td>            
+        <a class="btn btn-success btn-sm btn-icon-text mr-3"  href="{{ path('modifActivite',{'id':act.id}) }}">Modifier
+        <i class="typcn typcn-edit btn-icon-append"></i>
+        </a> {#action du buton ,bech nimchi mil vue lil blassa o5ra acées bil path #}
+        </td>
+        <td>
+        <a class="btn btn-danger btn-sm btn-icon-text" href="{{ path('supp_activite',{'id':act.id}) }}">Supprimer
+        	<i class="typcn typcn-delete-outline btn-icon-append"></i>
+        </a>
+        </td>
+
+								</tr>
+					
+		  
+	</tbody>
+	{% endfor %}
+	  <a class"badge badge-success" href="{{path('triact')}}">Trie par prix</a>		
+							
+						{#{{ knp_pagination_render(a) }}#}	
+						</tbody>
+					</table>
+
+
+				</div>
+			</div>
+		</div>
+{% endblock %}

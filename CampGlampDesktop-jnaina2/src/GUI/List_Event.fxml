@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="GUI.List_EventController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="743.0" style="-fx-background-color: #F1FCF8;">
+         <children>
+            <Label fx:id="Username" contentDisplay="CENTER" layoutX="1.0" layoutY="45.0" prefHeight="30.0" prefWidth="182.0" textAlignment="CENTER">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <ScrollPane fx:id="scroll" layoutX="14.0" layoutY="125.0" prefHeight="464.0" prefWidth="733.0">
+               <content>
+                  <GridPane fx:id="grid" prefHeight="12.0" prefWidth="34.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+            <Button fx:id="btn_PersoList" alignment="CENTER" contentDisplay="CENTER" layoutX="107.0" layoutY="89.0" mnemonicParsing="false" onAction="#ListPersoEvent" prefHeight="18.0" prefWidth="76.0" style="-fx-background-color: #63e6be; -fx-background-radius: 0 0 0 0;" text="Perso" textAlignment="CENTER" textFill="#0b3c40">
+               <font>
+                  <Font name="Segoe UI Semibold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#807575" height="26.74" radius="12.114999999999998" width="23.72" />
+               </effect>
+            </Button>
+            <Button fx:id="btn_creerPerso" alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="89.0" mnemonicParsing="false" onAction="#creerEventPerso" prefHeight="9.0" prefWidth="76.0" style="-fx-background-color: #63e6be; -fx-background-radius: 0 0 0 0;" text="Créer" textAlignment="CENTER" textFill="#0b3c40">
+               <font>
+                  <Font name="Segoe UI Semibold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#807575" height="26.74" radius="12.114999999999998" width="23.72" />
+               </effect>
+            </Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#686868" height="27.0" layoutX="248.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="29.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#686868" height="27.0" layoutX="211.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" width="29.0" />
+            <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="214.0" layoutY="101.0" onMouseClicked="#sortedEvent_ASC" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/up.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="251.0" layoutY="101.0" onMouseClicked="#sortedEvent_DESC" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/down.png" />
+               </image>
+            </ImageView>
+            <JFXCheckBox fx:id="ck_all" layoutX="303.0" layoutY="99.0" onMouseClicked="#disALL" text="ALL" />
+            <JFXCheckBox fx:id="ck_rando" layoutX="361.0" layoutY="99.0" onMouseClicked="#disRAND" text="RANDONNEE" />
+            <JFXCheckBox fx:id="ck_camp" layoutX="472.0" layoutY="99.0" onMouseClicked="#disCAMP" text="CAMPING" />
+            <JFXCheckBox fx:id="ck_glamp" layoutX="569.0" layoutY="99.0" onMouseClicked="#disGlamp" text="GLAMPING" />
+            <Button fx:id="btn_event" alignment="CENTER" contentDisplay="CENTER" layoutX="453.0" layoutY="20.0" mnemonicParsing="false" onAction="#GOEvents" prefHeight="40.0" prefWidth="107.0" style="-fx-background-color: #63e6be; -fx-background-radius: 0 0 0 0;" text="Events" textAlignment="CENTER" textFill="#0b3c40">
+               <font>
+                  <Font name="Segoe UI Semibold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#807575" height="26.74" radius="12.114999999999998" width="23.72" />
+               </effect>
+            </Button>
+            <Button fx:id="btn_activ" alignment="CENTER" contentDisplay="CENTER" layoutX="601.0" layoutY="20.0" mnemonicParsing="false" onAction="#GoActiv" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #63e6be; -fx-background-radius: 0 0 0 0;" text="Activites" textAlignment="CENTER" textFill="#0b3c40">
+               <font>
+                  <Font name="Segoe UI Semibold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#807575" height="26.74" radius="12.114999999999998" width="23.72" />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

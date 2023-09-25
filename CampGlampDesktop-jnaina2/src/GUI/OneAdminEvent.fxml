@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="174.0" prefWidth="480.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="GUI.OneAdminEventController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="480.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/detailler.png" />
+               </image>
+            </ImageView>
+            <Text fill="#615d5d" layoutX="344.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#615d5d" layoutX="175.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#615d5d" layoutX="175.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#615d5d" layoutX="31.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#615d5d" layoutX="174.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="#615d5d" layoutX="329.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="td_date" layoutX="391.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="tf_name" layoutX="239.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="tf_desc" layoutX="261.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="tf_type" layoutX="377.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="tf_location" layoutX="250.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text fx:id="tf_prix" layoutX="89.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <FontAwesomeIconView fx:id="delete" fill="#d0c900" glyphName="TRASH" layoutX="442.0" layoutY="186.0" onMouseClicked="#deletePerso" size="25" />
+            <FontAwesomeIconView fx:id="Mod" fill="#d0c900" glyphName="PENCIL" layoutX="441.0" layoutY="35.0" onMouseClicked="#ModeEvent" size="25" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

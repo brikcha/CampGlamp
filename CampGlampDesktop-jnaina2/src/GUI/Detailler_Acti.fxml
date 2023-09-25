@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Detailler_ActiController">
+   <children>
+      <AnchorPane layoutY="1.0" onMouseClicked="#add_event" prefHeight="600.0" prefWidth="743.0" style="-fx-background-color: #F1FCF8;">
+         <children>
+            <Pane layoutX="516.0" layoutY="-138.0" prefHeight="211.0" prefWidth="200.0" rotate="51.3" style="-fx-background-color: #63e6be;" />
+            <Label layoutX="199.0" layoutY="38.0" prefHeight="27.0" prefWidth="189.0" text="Liste des activites">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <MediaView fitHeight="300.0" fitWidth="500.0" layoutX="69.0" layoutY="138.0" />
+            <Button layoutX="69.0" layoutY="468.0" mnemonicParsing="false" onAction="#play" prefHeight="34.0" prefWidth="67.0" text="lire">
+               <font>
+                  <Font name="Bell MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="319.0" layoutY="468.0" mnemonicParsing="false" onAction="#stop" prefHeight="34.0" prefWidth="67.0" text="Stop">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+            </Button>
+            <Slider fx:id="volume" layoutX="441.0" layoutY="478.0" prefHeight="14.0" prefWidth="128.0" />
+            <Button layoutX="193.0" layoutY="468.0" mnemonicParsing="false" onAction="#pause" text="Pause">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+            </Button>
+            <MenuBar layoutX="79.0" layoutY="97.0" prefHeight="25.0" prefWidth="480.0" style="-fx-background-color: #63e6be;" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="185.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Fichier">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#openFichier" text="Ouvrir" />
+                        <MenuItem mnemonicParsing="false" onAction="#quitter" text="Quitter" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Aider">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

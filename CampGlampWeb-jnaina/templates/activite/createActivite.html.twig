@@ -1,0 +1,84 @@
+{% extends 'Adminbase.html.twig' %}
+
+
+{% block body %}
+<div class="col-lg-6">
+        <div  style="display: flex;align-items: center;justify-content: center">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" _msthash="1412255" _msttexthash="927225">Éléments de formulaire de l'Activite</h5>
+
+
+              <!-- General Form Elements -->
+              {{form_start(f,{attr:{novalidate:'novalidate'}}) }}
+                
+                  <label for="inputText" class="col-sm-3 col-form-label" _msthash="2482779" _msttexthash="25272">Nom</label>
+                  <div class="col-sm-10">
+                     {{ form_widget(f.nomActivite,{'attr':{'class':'form-control'}}) }}
+                      {{ form_errors(f.nomActivite)}} {#controle de saisie#}
+                </div>
+                 
+                
+                    
+
+            
+                  <label class="col-sm-3 col-form-label" _msthash="2549833" _msttexthash="95641">Type</label>
+                  <div class="col-sm-10">
+                   {# <select class="form-select" aria-label="Exemple de sélection par défaut" _mstaria-label="823901">
+                      <option selected="" _msthash="3925103" _msttexthash="390026">Ouvrez ce menu de sélection</option>
+                      <option value="1" _msthash="3925285" _msttexthash="30446">CAMPING</option>
+                      <option value="2" _msthash="3925467" _msttexthash="33007">GLAMPING</option>
+                      <option value="3" _msthash="3925649" _msttexthash="59371">RANDONNE</option>#}
+                      {{ form_widget(f.typeActivite,{'attr':{'class':'form-control'}}) }}
+                      
+                    {{ form_errors(f.typeActivite) }}
+                    </select>
+                  </div>
+                
+                    
+
+                
+                  <div class="col-sm-10">
+                   <label for="inputText" class="col-sm-3 col-form-label" _msthash="2483520" _msttexthash="76193">Prix</label>
+                    {#<input class="form-control" type="file" id="formFile">#}
+                         {{ form_widget(f.prixActivite,{'attr':{'class':'form-control'}}) }}
+                       {{ form_errors(f.prixActivite) }}
+                  
+                  </div>
+                     
+                 
+                 {# <div class="col-sm-10">
+                   <label for="inputText" class="col-sm-3 col-form-label" _msthash="2483520" _msttexthash="76193">Numeroparticipant</label>
+                    {#<input class="form-control" type="file" id="formFile">#}
+                      {#}   {{ form_widget(f.numeroparticipant,{'attr':{'class':'form-control'}}) }}
+                       {{ form_errors(f.numeroparticipant) }}
+                  
+                  </div>#}
+                  
+                  <div class="col-sm-10">
+                   <label for="inputText" class="col-sm-3 col-form-label" _msthash="2483520" _msttexthash="76193">Vidéo</label>
+                    {#<input class="form-control" type="file" id="formFile">#}
+                         {{ form_widget(f.video,{'attr':{'class':'form-control'}}) }}
+                       {{ form_errors(f.video) }}
+                  
+                  </div>
+                     
+                </div>
+                  
+               
+
+
+                     <br/>
+                    <div class="col-sm-10" style="display: flex;align-items: center;justify-content: center">
+        
+                   {# <button type="submit" class="btn btn-primary" _msthash="3116620" _msttexthash="499135">Soumettre le formulaire</button>#}
+                      {#} {{ form_widget(f.ajouter,{'attr':{'class':'btn btn-success btn-sm'}}) }}#}
+
+                    {{ form_widget(f.ajouter,{'attr':{'class':'btn btn-success btn-sm'}}) }}
+                  
+                </div>
+                
+               {{form_end(f)}}
+               
+
+{% endblock %}

@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Controller;
+
+use App\Entity\Activite;
+use App\Form\ActiviteType;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
+
+class ActiviteController extends AbstractController
+{
+    /**
+     * @Route("/", name="display_activite")
+     */
+    public function index(): Response
+    {
+        $activite=$this->getDoctrine()->getManager()->getRepository(Activite::class)->findAll();
+        return $this->render('activite/index.html.twig', [
+            'a' => $activite
+        ]);
+    }
+}

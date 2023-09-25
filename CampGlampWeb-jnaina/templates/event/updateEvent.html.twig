@@ -1,0 +1,103 @@
+{% extends 'Adminbase.html.twig' %}
+
+
+{% block body %}
+<div class="col-lg-6">
+        <div  style="display: flex;align-items: center;justify-content: center">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" _msthash="1412255" _msttexthash="927225">Modifier Evement</h5>
+
+              <!-- General Form Elements -->
+              {{form_start(f)}}
+                
+                  <label for="inputText" class="col-sm-3 col-form-label" _msthash="2482779" _msttexthash="25272">Nom</label>
+                  <div class="col-sm-10">
+                     {{ form_widget(f.nom,{'attr':{'class':'form-control'}}) }}
+                  
+                </div>
+
+                
+                  <label for="inputText" class="col-sm-3 col-form-label" _msthash="2484755" _msttexthash="183625">Description</label>
+                  <div class="col-sm-10">
+                   {#<textarea class="form-control" style="height: 100px"></textarea>#}
+                    {{ form_widget(f.description,{'attr':{'class':'form-control'}}) }}
+                  </div>
+                
+
+            
+                  <label class="col-sm-3 col-form-label" _msthash="2549833" _msttexthash="95641">Type</label>
+                  <div class="col-sm-10">
+                   {# <select class="form-select" aria-label="Exemple de sélection par défaut" _mstaria-label="823901">
+                      <option selected="" _msthash="3925103" _msttexthash="390026">Ouvrez ce menu de sélection</option>
+                      <option value="1" _msthash="3925285" _msttexthash="30446">CAMPING</option>
+                      <option value="2" _msthash="3925467" _msttexthash="33007">GLAMPING</option>
+                      <option value="3" _msthash="3925649" _msttexthash="59371">RANDONNE</option>#}
+                      {{ form_widget(f.type,{'attr':{'class':'form-control'}}) }}
+                    </select>
+                     
+                  </div>
+                
+
+                 
+                  <label for="inputText" class="col-sm-3 col-form-label" _msthash="2482779" _msttexthash="25272">Lieu</label>
+                  <div class="col-sm-10">
+                   {{ form_widget(f.lieu,{'attr':{'class':'form-control'}}) }}
+                  </div>
+                
+
+                
+                  <label for="inputText" class="col-sm-3 col-form-label" _msthash="2482779" _msttexthash="25272">Date</label>
+                  <div class="col-sm-10">
+                  {#<input type="date" class="form-control">#}
+                    {{ form_widget(f.date,{'attr':{'class':'form-control'}}) }}
+                  </div>
+                
+
+                
+                  <label for="inputNumber" class="col-sm-3 col-form-label" _msthash="2483520" _msttexthash="76193">Prix</label>
+                  <div class="col-sm-10">
+                  {#  <input type="number" class="form-control"> #}
+                    {{ form_widget(f.prix,{'attr':{'class':'form-control'}}) }}
+                  </div>
+                
+                     
+                 {#<label for="inputNumber" class="col-sm-3 col-form-label" _msthash="2483520" _msttexthash="76193">Payant</label>
+                  <div class="col-sm-10">
+                    {{ form_widget(f.payant,{'attr':{'class':'form-control'}}) }}
+                  </div>#}
+
+                  
+                  <div class="col-sm-10">
+                   <label for="inputNumber" class="col-sm-3 col-form-label" _msthash="2483520" _msttexthash="76193">Image</label>
+                    {#<input class="form-control" type="file" id="formFile">#}
+                         {{ form_widget(f.image,{'attr':{'class':'form-control'}}) }}
+                  </div>
+                </div>
+
+                 <div class="col-sm-10">
+                 <label for="inputNumber" class="col-sm-3 col-form-label" _msthash="2483520" _msttexthash="76193">Status</label>
+                    {#<div class="form-check">
+                     <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked="">
+                      <label class="form-check-label" for="gridRadios1" _msthash="3000" _msttexthash="250471"> PROGRAMMEE </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <label class="form-check-label" for="gridRadios2" _msthash="4034823" _msttexthash="250484"> FINI</label>
+                    </div>#}
+                {{ form_widget(f.status,{'attr':{'class':'form-control'}}) }}
+
+               
+
+
+                     <br/>
+                    <div class="col-sm-10" style="display: flex;align-items: center;justify-content: center">
+        
+                   {# <button type="submit" class="btn btn-primary" _msthash="3116620" _msttexthash="499135">Soumettre le formulaire</button>#}
+                     
+                    {{ form_widget(f.ajouter,{'attr':{'class':'btn btn-success btn-sm'}}) }}
+                  
+                </div>
+               {{form_end(f)}}
+
+{% endblock %}

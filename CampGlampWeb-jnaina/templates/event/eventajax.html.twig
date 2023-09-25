@@ -1,0 +1,42 @@
+ {% for event in e %}
+     <tr>
+       <td>{{ event.nom }}</td>
+       <td>{{ event.description }}</td>
+       <td>{{ event.type}}</td>
+       <td>{{ event.lieu}}</td>
+       <td>{{ event.date|date}}</td>
+       <td>{{ event.prix}}</td>
+        <td>{{ event.status}}</td>
+      {# <td><td><img class="-google-plus-circle" src="{{ asset('images/') ~ event.image }}"alt="exercice" width="400" height="450" >  </td></td>#}
+      <img width="350" height="200"  src="{{ asset('images/') ~ event.image }}" > 
+        
+		{#<img class="fit-picture"
+     src="{{asset('images/') ~ event.image}}">#}
+   
+
+							{#	<div class="d-flex align-items-center">
+											<a class="btn btn-success btn-sm btn-icon-text mr-3" href="{{ path('modifEvent',{'id': event.id}) }}" "">
+												Modifier
+												<i class="typcn typcn-edit btn-icon-append"></i>
+                        </a>
+											</button>
+											<a class="btn btn-danger btn-sm btn-icon-text" href="{{ path('supp_event',{'id': event.id}) }}" "">
+												Supprimer
+												<i class="typcn typcn-delete-outline btn-icon-append"></i>
+                        </a>
+											</button>
+										</div>#}
+         <td>            
+        <a class="btn btn-success btn-sm btn-icon-text mr-3"  href="{{ path('modifEvent',{'id':event.id}) }}">Modifier
+        <i class="typcn typcn-edit btn-icon-append"></i>
+        </a> {#action du buton ,bech nimchi mil vue lil blassa o5ra acées bil path #}
+        </td>
+        <td>
+        <a class="btn btn-danger btn-sm btn-icon-text" href="{{ path('supp_event',{'id':event.id}) }}">Supprimer
+        	<i class="typcn typcn-delete-outline btn-icon-append"></i>
+        </a>
+        </td>
+
+								</tr>
+							{% endfor %}
+                            

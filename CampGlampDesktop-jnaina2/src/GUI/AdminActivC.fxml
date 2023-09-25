@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="GUI.AdminActivCController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane id="AnchorPane" layoutX="-5.0" prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="386.0" prefWidth="710.0" stylesheets="@../../../../../3eme/S2/PI-DEV/JAVA/upgradi%20skander/upgradi/src/views/dashbord.css">
+                     <top>
+                        <Pane fx:id="pan" prefHeight="395.0" prefWidth="326.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label layoutX="132.0" layoutY="55.0" text="Nom" />
+                              <Label layoutX="136.0" layoutY="133.0" text="Nbr p" />
+                              <TextField fx:id="id_name" layoutX="234.0" layoutY="50.0" prefHeight="26.0" prefWidth="167.0" />
+                              <TextField fx:id="tf_nbP" layoutX="233.0" layoutY="129.0" prefHeight="25.0" prefWidth="165.0" />
+                              <Button fx:id="btn_ajouter" layoutX="262.0" layoutY="314.0" mnemonicParsing="false" onAction="#ajouteract" onMouseClicked="#addEvent" prefHeight="34.0" prefWidth="83.0" style="-fx-background-color: #63e6be; -fx-background-radius: 0 0 0 0;" text="Ajouter ">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <TextField fx:id="tf_prix" layoutX="235.0" layoutY="216.0" prefHeight="25.0" prefWidth="165.0" />
+                              <Label layoutX="145.0" layoutY="177.0" text="video Nale" />
+                              <Label layoutX="146.0" layoutY="220.0" text="Prix" />
+                              <Button fx:id="btn_choose" layoutX="238.0" layoutY="173.0" mnemonicParsing="false" onAction="#choosefile" prefHeight="25.0" prefWidth="58.0" text="choose" />
+                              <Label layoutX="136.0" layoutY="262.0" text="type" />
+                              <TextField fx:id="type" layoutX="236.0" layoutY="261.0" prefHeight="26.0" prefWidth="167.0" text=" " />
+                              <TextField fx:id="tf_videoName" layoutX="300.0" layoutY="173.0" prefHeight="25.0" prefWidth="99.0" />
+                           </children>
+                        </Pane>
+                     </top>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="583.0" prefHeight="400.0" prefWidth="244.0" style="-fx-background-color: #B9B9B8;">
+               <children>
+                  <ImageView fitHeight="232.0" fitWidth="288.0" layoutX="6.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/Forgot%20password-rafiki.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#f8f3f3" layoutX="5.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Admin Activity" textAlignment="CENTER" wrappingWidth="231.859375">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <FontAwesomeIconView fx:id="close" glyphName="CLOSE" layoutX="210.0" layoutY="35.0" onMouseClicked="#close" size="25" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

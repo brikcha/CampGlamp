@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="257.0" prefWidth="730.0" style="-fx-background-color: #CCE3D5;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="GUI.OneEvent_FrontController">
+   <children>
+      <ImageView fx:id="event_img" fitHeight="240.0" fitWidth="265.0" layoutX="13.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/Summer%20Camp-rafiki%20(1).png" />
+         </image>
+      </ImageView>
+      <Line endX="-100.0" endY="172.0" layoutX="381.0" layoutY="45.0" startX="-100.0" />
+      <Text layoutX="317.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="317.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="535.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="535.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="317.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description : ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="tf_name" layoutX="377.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="tf_type" layoutX="589.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="tf_date" layoutX="374.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="tf_location" layoutX="611.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="tf_desc" layoutX="420.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a" wrappingWidth="285.123046875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="tf_prix" layoutX="175.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a" wrappingWidth="39.648438543081284">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="223.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" wrappingWidth="20.648438543081284">
+         <font>
+            <Font name="Yu Gothic Regular" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="GUI.AdminEventCController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="-5.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="710.0" stylesheets="@../../../../../3eme/S2/PI-DEV/JAVA/upgradi%20skander/upgradi/src/views/dashbord.css">
+               <top>
+                  <Pane fx:id="pan" prefHeight="395.0" prefWidth="326.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="120.0" layoutY="51.0" text="Nom evenement" />
+                        <Label layoutX="133.0" layoutY="86.0" text="Description" />
+                        <Label layoutX="159.0" layoutY="124.0" text="Lieu" />
+                        <ComboBox fx:id="type_a_jour" layoutX="231.0" layoutY="161.0" prefHeight="26.0" prefWidth="173.0" />
+                        <Label layoutX="153.0" layoutY="163.0" text="Type" />
+                        <DatePicker fx:id="date_a_jour" layoutX="228.0" layoutY="207.0" />
+                        <Label layoutX="150.0" layoutY="211.0" prefHeight="18.0" prefWidth="35.0" text="Date" />
+                        <Label layoutX="153.0" layoutY="268.0" text="statut" />
+                        <ComboBox fx:id="statut_a_jour" layoutX="232.0" layoutY="260.0" prefHeight="26.0" prefWidth="173.0" />
+                        <CheckBox fx:id="payant_a_jour" layoutX="188.0" layoutY="323.0" mnemonicParsing="false" onAction="#ck_clicked" text="Payant" />
+                        <CheckBox fx:id="gratuit_a_jour" layoutX="293.0" layoutY="321.0" mnemonicParsing="false" text="Gratuit" />
+                        <Label layoutX="162.0" layoutY="366.0" text="Prix" />
+                        <TextField fx:id="id_name" layoutX="234.0" layoutY="50.0" prefHeight="26.0" prefWidth="167.0" />
+                        <TextField fx:id="description_a_jour" layoutX="233.0" layoutY="85.0" prefHeight="26.0" prefWidth="167.0" text=" " />
+                        <TextField fx:id="lieu_a_jour" layoutX="234.0" layoutY="122.0" prefHeight="26.0" prefWidth="167.0" />
+                        <TextField fx:id="prix_a_jour" layoutX="235.0" layoutY="359.0" />
+                        <Button fx:id="btn_ajouter" layoutX="147.0" layoutY="420.0" mnemonicParsing="false" onAction="#ajouterevent" onMouseClicked="#addEvent" prefHeight="34.0" prefWidth="83.0" style="-fx-background-color: #63e6be; -fx-background-radius: 0 0 0 0;" text="Ajouter ">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="12.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="btn_mod" layoutX="342.0" layoutY="420.0" mnemonicParsing="false" onAction="#modificatin" onMouseClicked="#addEvent" prefHeight="34.0" prefWidth="83.0" style="-fx-background-color: #63e6be; -fx-background-radius: 0 0 0 0;" text="Modifier">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="12.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </Pane>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="583.0" prefHeight="510.0" prefWidth="244.0" style="-fx-background-color: #B9B9B8;">
+         <children>
+            <ImageView fitHeight="232.0" fitWidth="288.0" layoutX="6.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Forgot%20password-rafiki.png" />
+               </image>
+            </ImageView>
+            <Text fill="#f8f3f3" layoutX="5.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Admin Event" textAlignment="CENTER" wrappingWidth="231.859375">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <FontAwesomeIconView fx:id="close" glyphName="CLOSE" layoutX="210.0" layoutY="35.0" onMouseClicked="#close" size="25" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
